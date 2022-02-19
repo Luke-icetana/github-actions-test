@@ -12,9 +12,8 @@ jobs:
         run: |
           node -v
           npm -v
-      - name: install numpy
-        run : pip install numpy
       - name: python scripts
         run: |
-          import numpy as np
-          print(np.random.randn(10))
+          import platform
+          print(platform.processor())
+        shell: python
