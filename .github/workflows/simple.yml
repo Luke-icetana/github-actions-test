@@ -17,3 +17,18 @@ jobs:
           import platform
           print(platform.processor())
         shell: python
+
+  run-windows-shell-command:
+    runs-on: windows-latest
+    steps:
+      - name: echo a string
+        run: echo "Hello World"
+      - name: multiline script
+        run: |
+          node -v
+          npm -v
+      - name: python scripts
+        run: |
+          import platform
+          print(platform.processor())
+        shell: python
