@@ -2,6 +2,9 @@ name: Actions Workflow
 on:
   schedule:
     - "0/5 * * * *"
+    - pull_request:
+          types:
+              [closed, assigned, reopened, synchronize]
 jobs:
   run-github-actions:
     runs-on: ubuntu-latest
